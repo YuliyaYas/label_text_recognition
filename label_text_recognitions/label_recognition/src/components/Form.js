@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-
+import withAuth from '../hocs/withAuth'
 
 class Form extends React.Component {
   constructor(props){
@@ -26,7 +26,7 @@ class Form extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    debu
+    debugger
     const {name, price, store, note} = this.state
     this.props.addImage({name, price, store, note, blob: this.props.image, otr: this.props.text, user_id: 4}, ()=> console.log("after submit ",this.props))
   }
@@ -69,7 +69,7 @@ render(){
           <i className="write icon"></i>
         </div>
           <div className="field" />
-          <button className="ui green button" type="submit">
+          <button className="ui green button" type="submit" onClick={this.ha}>
             SAVE
           </button>
         </form>
@@ -79,10 +79,9 @@ render(){
 }
 
 const mapStateToProps = (state) => {
-  // console.log("state",state);
   return {
     newImage: state.newImage
   }
 }
 
-export default connect(mapStateToProps, actions)(Form);
+export default withAuth(connect(mapStateToProps, actions)(Form));
