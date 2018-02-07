@@ -19,7 +19,7 @@ class Navbar extends React.Component {
 
         <Link to={`/${this.props.name}/images`} className="header item">
         <div className="ui inverted icon">
-            <i className="list layout big icon "></i>
+            <i className="image big icon "></i>
         </div>
       </Link>
 

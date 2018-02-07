@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions'
-import results from './searchres'
-import SearchResult from './SearchResult'
-import Form from './Form'
-import withAuth from '../hocs/withAuth'
+import * as actions from '../actions';
+import results from './searchres';
+import SearchResult from './SearchResult';
+import Form from './Form';
+import withAuth from '../hocs/withAuth';
 
 
 class Search extends React.Component {
@@ -30,12 +30,12 @@ render(){
   {this.state.clicked ? <Form text={this.props.imageText.imageText} image={this.props.img.img}/> :
     <div>
     <div className="ui grid">
-      <div className="black row">
+      <div className=" row">
         <div className="three wide column">
           <img width="60" height="60" alt="" src={this.props.img.img}/>
         </div>
-        <div className="ten wide column">
-          <h2>Results that matches:</h2>
+        <div className="nine wide column">
+          <h3>Results that matches:</h3>
           <p>{this.props.imageText.imageText}</p>
         </div>
         <div className="three wide column">

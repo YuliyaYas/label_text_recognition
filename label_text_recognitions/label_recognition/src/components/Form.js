@@ -26,7 +26,6 @@ class Form extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    debugger
     const {name, price, store, note} = this.state
     this.props.addImage({name, price, store, note, blob: this.props.image, otr: this.props.text, user_id: 4}, ()=> console.log("after submit ",this.props))
   }

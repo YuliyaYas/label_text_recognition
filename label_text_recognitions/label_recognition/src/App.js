@@ -28,9 +28,8 @@ class App extends Component {
     if (localStorage.getItem('token')) {
       this.props.fetchUser();
     }
-    fetch('http://localhost:3000/api/v1/users/4')
-    .then(resp => resp.json())
-    .then(json => this.setState({images: json.images}))
+      this.props.fetchImages()
+
   }
 
 
@@ -39,7 +38,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Switch>
-            <Route path={`/${this.props.name}/images`} component={ () => <Images images={this.state.images}/>} />
+            <Route path={`/${this.props.name}/images`} component={ () => <Images/>} />
             <Route path={`/${this.props.name}/settings`} component={Settings} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />

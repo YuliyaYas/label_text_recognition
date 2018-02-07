@@ -18,6 +18,13 @@ export const fetchUser = () => dispatch => {
   });
 };
 
+export const fetchImages = () => dispatch => {
+  dispatch({ type: 'ASYNC_START' });
+  adapter.auth.getImages().then(images => {
+    dispatch({ type: 'SET_CURRENT_IMAGES', images });
+  });
+};
+
 export const addImage = (data) => dispatch => {
   dispatch({ type: 'ASYNC_START' });
   adapter.auth.postImage(data).then(image => {

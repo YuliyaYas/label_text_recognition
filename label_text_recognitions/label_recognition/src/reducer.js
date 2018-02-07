@@ -52,12 +52,22 @@ const addImage = (state = [], action) => {
   }
 }
 
+const getAllImages = (state = null, action) => {
+  switch(action.type){
+    case 'SET_CURRENT_IMAGES':
+      return action.images
+    default:
+     return state
+  }
+}
+
 const rootReducer = combineReducers({
   auth: authReducer,
   img: saveNewImage,
   googleSearch: saveSearchInfo,
   imageText: saveImageTextResult,
-  newImage: addImage
+  newImage: addImage,
+  images: getAllImages
 
 })
 

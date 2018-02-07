@@ -97,3 +97,30 @@ footer.footer {
   z-index: -3;
   opacity: 0.75;
 }
+
+.ui.grid>.row {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%!important;
+    padding-top: 1rem;
+}
+
+.ui.grid {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    margin-left: -1rem;
+  }

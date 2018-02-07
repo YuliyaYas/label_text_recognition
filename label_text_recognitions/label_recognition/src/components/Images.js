@@ -1,13 +1,29 @@
 import React from 'react'
 import withAuth from '../hocs/withAuth'
 import ImageCard from './ImageCard'
+import { connect } from 'react-redux';
+import * as actions from '../actions'
 
 const Images = (props) => {
-  const images = props.images.map((image, i) => <ImageCard image={image} key={i} />)
+  console.log("in imgs", props)
   return(
-
+    <div>
+      { props.images
+        ?
       <div className="indexWrapper">
-        {images}
-      </div>)
+        {props.images.map((image, i) => <ImageCard image={image} key={i} />)}
+      </div>
+      :
+      "NONE"
+    }
+    </div>)
 }
-export default withAuth(Images)
+
+const mapStateToProps = (state) => {
+  console.log("state in images",state.images);
+  return {
+    images: state.images
+  }
+}
+
+export default withAuth(connect(mapStateToProps, actions)(Images))

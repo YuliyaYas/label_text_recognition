@@ -32,10 +32,17 @@ const postImage = data => {
   }).then(res => res.json());
 }
 
+const getImages = () => {
+  return fetch(`${API_ROOT}/users/4`)
+  .then(res => res.json())
+  .then(json => json.images)
+}
+
 export const adapter = {
   auth: {
     login,
     getCurrentUser,
-    postImage
+    postImage,
+    getImages
   }
 };
