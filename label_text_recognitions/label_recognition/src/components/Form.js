@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import withAuth from '../hocs/withAuth'
+import withAuth from '../hocs/withAuth';
+import { withRouter } from 'react-router-dom'
+
 
 class Form extends React.Component {
   constructor(props){
     super(props)
-    console.log("in form", props);
+    console.log("in form", props.history);
     this.state = {
       name: '',
       price: '',
@@ -27,7 +29,7 @@ class Form extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const {name, price, store, note} = this.state
-    this.props.addImage({name, price, store, note, blob: this.props.image, otr: this.props.text, user_id: 4}, ()=> console.log("after submit ",this.props))
+    this.props.addImage({name, price, store, note, blob: this.props.image, otr: this.props.text, user_id: 4}, this.props.history, this.props.name)
   }
 
 render(){
@@ -68,7 +70,7 @@ render(){
           <i className="write icon"></i>
         </div>
           <div className="field" />
-          <button className="ui green button" type="submit" onClick={this.ha}>
+          <button className="ui green button" type="submit">
             SAVE
           </button>
         </form>
@@ -80,8 +82,9 @@ render(){
 const mapStateToProps = (state) => {
   console.log("state in FORM",state)
   return {
-    newImage: state.newImage
+    newImage: state.newImage,
+    name: state.auth.currentUser.username
   }
 }
 
-export default withAuth(connect(mapStateToProps, actions)(Form));
+export default withAuth(withRouter(connect(mapStateToProps, actions)(Form)));

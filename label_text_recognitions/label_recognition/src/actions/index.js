@@ -25,11 +25,12 @@ export const fetchImages = () => dispatch => {
   });
 };
 
-export const addImage = (data) => dispatch => {
+export const addImage = (data, history, user) => dispatch => {
   dispatch({ type: 'ASYNC_START' });
   adapter.auth.postImage(data).then(image => {
     dispatch({ type: 'POST_IMAGE', image });
-  });
+    history.push(`/${user}/images`)
+  })
 };
 
 export const deleteImg = (id) => dispatch => {

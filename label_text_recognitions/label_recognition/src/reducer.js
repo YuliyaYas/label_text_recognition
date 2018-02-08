@@ -43,14 +43,6 @@ const saveImageTextResult = (state = null, action) => {
      return state
   }
 }
-const addImage = (state = [], action) => {
-  switch(action.type){
-    case 'POST_IMAGE':
-      return [...state, action.image]
-    default:
-     return state
-  }
-}
 
 const getAllImages = (state = null, action) => {
   switch(action.type){
@@ -59,6 +51,8 @@ const getAllImages = (state = null, action) => {
     case 'DELETE_IMAGE':
       const images = state.filter(image => image.id !== action.image.id)
       return images
+    case 'POST_IMAGE':
+      return [...state, action.image]
     default:
      return state
   }
@@ -69,7 +63,6 @@ const rootReducer = combineReducers({
   img: saveNewImage,
   googleSearch: saveSearchInfo,
   imageText: saveImageTextResult,
-  newImage: addImage,
   images: getAllImages
 
 })
