@@ -22,7 +22,6 @@ class Search extends React.Component {
   }
 
 render(){
-  debugger
   const results = this.props.googleSearch
   const searchResults = results.map((r,i) => <SearchResult key = {i} result={r} />)
   return(
@@ -32,15 +31,15 @@ render(){
     <div className="ui grid">
       <div className=" row">
         <div className="three wide column">
-          <img width="60" height="60" alt="" src={this.props.img.img}/>
+          {/*}<img width="60" height="60" alt="" src={this.props.img.img}/>*/}
         </div>
         <div className="nine wide column">
           <h3>Results that matches:</h3>
-          <p>{this.props.imageText.imageText}</p>
+          {/*<p>{this.props.imageText.imageText}</p>*/}
         </div>
         <div className="three wide column">
           <br/>
-          <button type="submit" className="ui basic green button" onClick={this.handleSave}>Save</button>
+          {/*<button type="submit" className="ui basic green button" onClick={this.handleSave}>Save</button> */}
         </div>
       </div>
     </div>
