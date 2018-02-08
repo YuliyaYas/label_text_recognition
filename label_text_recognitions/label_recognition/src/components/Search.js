@@ -22,8 +22,8 @@ class Search extends React.Component {
   }
 
 render(){
-  const results = this.props.googleSearch.googleSearch
-  console.log("in SEARCH", this.props);
+  debugger
+  const results = this.props.googleSearch
   const searchResults = results.map((r,i) => <SearchResult key = {i} result={r} />)
   return(
   <div>

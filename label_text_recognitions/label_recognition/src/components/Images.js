@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import * as actions from '../actions'
 
 const Images = (props) => {
-  console.log("images", props.images);
   return(
     <div>
       { props.images
@@ -20,6 +19,7 @@ const Images = (props) => {
 }
 
 const mapStateToProps = (state) => {
+  console.log("in img", state);
   return {
     images: state.images
   }

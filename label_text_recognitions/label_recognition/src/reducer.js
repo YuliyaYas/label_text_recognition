@@ -58,13 +58,22 @@ const getAllImages = (state = null, action) => {
   }
 }
 
+const getAllSearches = (state = [], action) => {
+  switch(action.type){
+    case 'SET_SEARCH_RESULTS':
+    console.log("in reducer, action is", action)
+      return action.results
+    default:
+     return state
+  }
+}
+
 const rootReducer = combineReducers({
   auth: authReducer,
   img: saveNewImage,
-  googleSearch: saveSearchInfo,
+  googleSearch: getAllSearches,
   imageText: saveImageTextResult,
   images: getAllImages
-
 })
 
 

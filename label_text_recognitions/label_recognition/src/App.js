@@ -29,6 +29,8 @@ class App extends Component {
       this.props.fetchUser();
     }
       this.props.fetchImages()
+      
+
 
   }
 

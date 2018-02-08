@@ -25,6 +25,15 @@ export const fetchImages = () => dispatch => {
   });
 };
 
+export const fetchSearchresult = (term, history, user) => dispatch => {
+  dispatch({ type: 'ASYNC_START' });
+  adapter.auth.getSearchResult(term).then(results => {
+    console.log("in fetchSearchResults", results)
+    dispatch({type: 'SET_SEARCH_RESULTS', results})
+    history.push(`/${user}/search`)
+  });
+};
+
 export const addImage = (data, history, user) => dispatch => {
   dispatch({ type: 'ASYNC_START' });
   adapter.auth.postImage(data).then(image => {

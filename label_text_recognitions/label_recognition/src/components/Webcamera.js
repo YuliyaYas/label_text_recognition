@@ -60,17 +60,14 @@ import withAuth from '../hocs/withAuth'
       const jsonObj = JSON.parse(request.responseText)
       const imageText = jsonObj.responses[0].textAnnotations[0].description
       this.props.saveImageText(imageText)
-      /*
-      jsonObj.responses[0].fulltextAnnotation.pages[0].text*/
-      console.log("read",imageText);
-
-      this.searchText(imageText)
+      this.props.fetchSearchresult(imageText, this.props.history, this.props.user)
+      {/*      console.log("SEARCH RESULTS", this.props.fetchSearchresult(imageText));
+*/}
     };
   }
 
   searchText = (term) => {
-    // e.preventDefault();
-    // console.log("in search text", this.props);
+
     fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyDhhXqmdbAzvQfW2jHIoBFRC1aT4YxUTtw&cx=009282617174261836569:hstwd4mledu&q=${term}`)
     .then(resp => resp.json())
     .then(json =>
@@ -83,7 +80,7 @@ import withAuth from '../hocs/withAuth'
   }
 
   render() {
-    // console.log("search", this.props);
+    console.log("search", this.props);
     return (
       <div>
         {this.state.clicked ? <img id="content" width="300" height="250" alt="" src={this.props.img.img} /> : <Webcam
@@ -119,7 +116,6 @@ import withAuth from '../hocs/withAuth'
 }
 
 const mapStateToProps = (state) => {
-  console.log(" in webcamera state",state);
   return {
     img: state.img,
     imageText: state.imageText,

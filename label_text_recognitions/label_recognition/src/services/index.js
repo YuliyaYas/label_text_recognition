@@ -45,12 +45,19 @@ const getImages = () => {
   .then(json => json.images)
 }
 
+const getSearchResult = (term) => {
+  return fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyDhhXqmdbAzvQfW2jHIoBFRC1aT4YxUTtw&cx=009282617174261836569:hstwd4mledu&q=${term}`)
+  .then(resp => resp.json())
+  .then(json => json.items)
+}
+
 export const adapter = {
   auth: {
     login,
     getCurrentUser,
     postImage,
     getImages,
-    deleteImage
+    deleteImage,
+    getSearchResult
   }
 };

@@ -8,9 +8,8 @@ import { withRouter } from 'react-router-dom'
 class Form extends React.Component {
   constructor(props){
     super(props)
-    console.log("in form", props.history);
     this.state = {
-      name: '',
+      name: this.props.text,
       price: '',
       store: '',
       note: ''
@@ -29,7 +28,7 @@ class Form extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const {name, price, store, note} = this.state
-    this.props.addImage({name, price, store, note, blob: this.props.image, otr: this.props.text, user_id: 4}, this.props.history, this.props.name)
+    this.props.addImage({name, price, store, note, blob: this.props.image, otr: this.props.text, user_id: this.props.id}, this.props.history, this.props.name)
   }
 
 render(){
@@ -45,7 +44,8 @@ render(){
             <div className="ui fluid left icon input" onChange={this.handleChange}>
               <input
                 placeholder="image name"
-                name="name"/>
+                value={this.state.name}
+                name="name"></input>
               <i className="write icon"></i>
             </div>
             <div className="ui fluid left icon input" onChange={this.handleChange}>
@@ -83,7 +83,10 @@ const mapStateToProps = (state) => {
   console.log("state in FORM",state)
   return {
     newImage: state.newImage,
-    name: state.auth.currentUser.username
+    name: state.auth.currentUser.username,
+    id: state.auth.currentUser.id,
+    text: state.imageText.imageText
+
   }
 }
 
