@@ -56,6 +56,9 @@ const getAllImages = (state = null, action) => {
   switch(action.type){
     case 'SET_CURRENT_IMAGES':
       return action.images
+    case 'DELETE_IMAGE':
+      const images = state.filter(image => image.id !== action.image.id)
+      return images
     default:
      return state
   }

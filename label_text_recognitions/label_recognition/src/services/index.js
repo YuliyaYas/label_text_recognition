@@ -32,6 +32,13 @@ const postImage = data => {
   }).then(res => res.json());
 }
 
+const deleteImage = id => {
+  return fetch(`${API_ROOT}/images/${id}`, {
+    method: 'DELETE',
+    headers
+    }).then(res => res.json());
+}
+
 const getImages = () => {
   return fetch(`${API_ROOT}/users/4`)
   .then(res => res.json())
@@ -43,6 +50,7 @@ export const adapter = {
     login,
     getCurrentUser,
     postImage,
-    getImages
+    getImages,
+    deleteImage
   }
 };

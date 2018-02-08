@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions'
 
 const Images = (props) => {
+  console.log("images", props.images);
   return(
     <div>
       { props.images
