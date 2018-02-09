@@ -39,7 +39,7 @@ import withAuth from '../hocs/withAuth'
   }
 
   refreshPage(){
-    window.location.pathname = '/webcamera';
+    window.location.pathname = '/y';
   }
 
   search = (e) => {
@@ -83,8 +83,9 @@ import withAuth from '../hocs/withAuth'
     console.log("search", this.props);
     return (
       <div>
-        {this.state.clicked ? <img id="content" width="300" height="250" alt="" src={this.props.img.img} /> : <Webcam
+        {this.state.clicked ? <img alt="" src={this.props.img.img} /> : <Webcam
           id="content"
+          className="camera"
           audio={false}
           height={350}
           ref={this.setRef}
@@ -95,7 +96,7 @@ import withAuth from '../hocs/withAuth'
 
         {this.state.clicked
           ?
-          <div>
+          <div className="camera">
           <button className="circular ui huge icon red basic button" onClick={this.refreshPage}>
             <i className="undo red icon"></i>
           </button>
@@ -104,7 +105,7 @@ import withAuth from '../hocs/withAuth'
           </Link>
           </div>
           :
-          <div>
+          <div className="camera">
           <button className="circular ui massive icon blue basic button" onClick={this.capture}>
             <i className="camera retro icon"></i>
           </button>

@@ -7,11 +7,6 @@ body {
   background-size: auto 100%;
 
 }
-img {
-    border-style: none;
-    padding: 4px;
-    background: white;
-}
 
 footer.footer {
   text-align: center;
@@ -19,19 +14,6 @@ footer.footer {
   border-top: 1px solid #E5E5E5;
 }
 
- .ui.footer.segment {
-   position: absolute;
-   bottom: 0;
-   width: 100%;
-   height: auto !important;
-   padding: 3em 0em;
-  }
-
-  #content {
-    width: 350px;
-    height: 250px;
-    margin: 5.5%;
-}
 
 .green-link{
   color: #008000;
@@ -69,33 +51,33 @@ footer.footer {
     padding: 4%
   }
 
-  .indexWrapper {
+  /*.indexWrapper {
     margin: auto;
-  }
+  }*/
 
-  .maxImageTile {
+  /*.maxImageTile {
   background-size: cover;
   width: 150px;
   height: 150px;
-}
+}*/
 
-.imgTile {
+/*.imgTile {
   display: inline;
   background-repeat: no-repeat;
   background-position: center 90%;
   float: left;
   transition: 0.75s;
   opacity: 1;
-}
+}*/
 
-.maxBackgroundSneak {
+/*.maxBackgroundSneak {
   position: absolute;
   width: inherit;
   height: inherit;
   background-size: cover;
   z-index: -3;
   opacity: 0.75;
-}
+}*/
 
 .ui.grid>.row {
     position: relative;
@@ -118,6 +100,13 @@ footer.footer {
     padding-top: 1rem;
 }
 
+.ui.footer.segment {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto !important;
+}
+
 .ui.grid {
     margin-top: -1rem;
     margin-bottom: -1rem;
@@ -125,6 +114,17 @@ footer.footer {
   }
 
 .image-card {
-  width: 10em;
-  height: 10em;
+  width: 20%;
+  height: auto;
+}
+
+.camera {
+  width: 100%;
+  text-align: center;
+}
+
+#content {
+  width: 350px;
+  height: 250px;
+  margin: 5.5%;
 }

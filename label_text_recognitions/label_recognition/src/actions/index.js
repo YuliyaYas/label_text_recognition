@@ -27,7 +27,6 @@ export const fetchImages = () => dispatch => {
 
 export const fetchSearchresult = (term, history, user) => dispatch => {
   dispatch({ type: 'ASYNC_START' });
-  debugger
   adapter.auth.getSearchResult(term).then(results => {
     console.log("in fetchSearchResults", results)
     dispatch({type: 'SET_SEARCH_RESULTS', results})
