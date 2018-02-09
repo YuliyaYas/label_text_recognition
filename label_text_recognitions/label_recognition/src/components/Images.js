@@ -6,7 +6,7 @@ import * as actions from '../actions'
 
 const Images = (props) => {
   return(
-    <div>
+    <div className="indexWrapper">
       { props.images
         ?
       <div >

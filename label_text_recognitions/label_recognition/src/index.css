@@ -54,33 +54,32 @@ footer.footer {
     padding: 4%
   }
 
-  /*.indexWrapper {
+  .indexWrapper {
     margin: auto;
-  }*/
+  }
 
-  /*.maxImageTile {
+  .maxImageTile {
   background-size: cover;
   width: 150px;
   height: 150px;
-}*/
+}
 
-/*.imgTile {
+.imgTile {
   display: inline;
   background-repeat: no-repeat;
   background-position: center 90%;
   float: left;
   transition: 0.75s;
   opacity: 1;
-}*/
+}
 
-/*.maxBackgroundSneak {
+.maxBackgroundSneak {
   position: absolute;
   width: inherit;
   height: inherit;
   background-size: cover;
   z-index: -3;
-  opacity: 0.75;
-}*/
+}
 
 .ui.grid>.row {
     position: relative;
@@ -143,4 +142,10 @@ footer.footer {
 
 .form-style{
   text-align: center;
+}
+
+.ui.form textarea:not([rows]) {
+    height: 17em;
+    min-height: 8em;
+    max-height: 24em;
 }

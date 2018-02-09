@@ -70,9 +70,11 @@ render(){
           <i className="write icon"></i>
         </div>
           <div className="field" />
+          <div className=" camera">
           <button className="ui green button" type="submit">
             SAVE
           </button>
+          </div>
         </form>
     </div>
   )
