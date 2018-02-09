@@ -9,7 +9,7 @@ class Settings extends React.Component {
 
   render() {
   return (
-    <form onSubmit={this.handleSubmit}>
+    <form onSubmit={this.handleSubmit} className="form-style">
         <label></label>
       <br/>
       <div className="ui left icon input">

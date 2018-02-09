@@ -24,27 +24,34 @@ class Search extends React.Component {
 render(){
   const results = this.props.googleSearch
   const searchResults = results.map((r,i) => <SearchResult key = {i} result={r} />)
+  console.log("in search", this.props)
   return(
   <div>
   {this.state.clicked ? <Form text={this.props.imageText.imageText} image={this.props.img.img}/> :
     <div>
     <div className="ui grid">
-      <div className=" row">
+      <div className="row">
         <div className="three wide column">
-          {/*}<img width="60" height="60" alt="" src={this.props.img.img}/>*/}
+          { this.props.imageText ? <img width="60" height="60" alt="" src={this.props.img.img}/> : <a href='/y/images'>go back</a>}
         </div>
         <div className="nine wide column">
-          <h3>Results that matches:</h3>
-          {/*<p>{this.props.imageText.imageText}</p>*/}
+          { this.props.imageText
+            ?
+           <div>
+           <p>Results that matches:</p>
+           <p>{this.props.imageText.imageText}</p>
+           </div>
+           : ""}
+
         </div>
         <div className="three wide column">
           <br/>
-          {/*<button type="submit" className="ui basic green button" onClick={this.handleSave}>Save</button> */}
+          { this.props.imageText ? <button type="submit" className="ui basic green button" onClick={this.handleSave}>Save</button>  : ""}
         </div>
       </div>
     </div>
     <div className="scroll">
-      <ul>{searchResults}</ul>
+      {searchResults}
     </div>
     </div>
   }

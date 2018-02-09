@@ -9,7 +9,7 @@ const Images = (props) => {
     <div>
       { props.images
         ?
-      <div className="indexWrapper">
+      <div >
         {props.images.map((image, i) => <ImageCard image={image} key={i} />)}
       </div>
       :
