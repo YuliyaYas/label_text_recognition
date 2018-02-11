@@ -31,7 +31,6 @@ footer.footer {
 }
 
 .scroll {
-    background-color: #FFFFFF;
     width: 100%;
     height: 36em;
     overflow: scroll;
@@ -60,8 +59,8 @@ footer.footer {
 
   .maxImageTile {
   background-size: cover;
-  width: 150px;
-  height: 150px;
+  width: 50%;
+  height: 200px;
 }
 
 .imgTile {
@@ -148,4 +147,16 @@ footer.footer {
     height: 17em;
     min-height: 8em;
     max-height: 24em;
+}
+
+div.gallery {
+    margin: 0.5%;
+    float: left;
+    width: 49%;
+}
+
+
+div.gallery img {
+    width: 100%;
+    height: auto;
 }

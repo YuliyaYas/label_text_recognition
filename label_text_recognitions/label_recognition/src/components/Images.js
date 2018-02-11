@@ -6,10 +6,10 @@ import * as actions from '../actions'
 
 const Images = (props) => {
   return(
-    <div className="indexWrapper">
+    <div>
       { props.images
         ?
-      <div >
+      <div>
         {props.images.map((image, i) => <ImageCard image={image} key={i} />)}
       </div>
       :
