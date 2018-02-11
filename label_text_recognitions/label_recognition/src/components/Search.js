@@ -24,44 +24,60 @@ class Search extends React.Component {
 render(){
   const results = this.props.googleSearch
   const searchResults = results.map((r,i) => <SearchResult key = {i} result={r} />)
-  // console.log("in search", this.props)
+  console.log("in search", this.props)
   return(
   <div>
-  {this.state.clicked ? <Form text={this.props.imageText.imageText} image={this.props.img.img}/> :
+  {this.state.clicked ?
     <div>
-    <div className="twelve wide column">
-      { this.props.imageText
-        ?
-       <div>
-       {/*<p className="p-search" >Results that matches: {this.props.imageText.imageText.toLowerCase()}</p>*/}
-       </div>
-       : ""}
-
+      <Form text={this.props.imageText.imageText} image={this.props.img.img}/>
+      <div className="ui inverted vertical footer segment">
+        <div className="ui center aligned container">
+        <div className="ui two column grid">
+            <div className="column">
+            <a href={`/y/images`} className="circular ui large icon blue basic button">
+              <i className="grid layout icon"></i>
+            </a>
+            </div>
+            <div className="column">
+            <a href="/y"className="circular ui large icon blue basic button">
+              <i className="camera retro icon"></i>
+            </a>
+            </div>
+            </div>
+        </div>
+      </div>
     </div>
+    :
+    <div>
     <div className="scroll">
       {searchResults}
     </div>
     <div className="ui grid">
       <div className="row">
+      <div className="ui inverted vertical footer segment">
+        <div className="ui center aligned container">
+        <div className="ui two column grid">
+            <div className="column">
+            {this.props.img ?
+            <div>
+            <a href="/y" className="circular ui large icon blue basic button" onClick={this.capture}>
+              <i className="undo icon"></i>
+            </a>
+            </div> : "in img" }
+            </div>
+            {this.props.img ? <div className="column">
+              <button type="submit" className="ui basic green button" onClick={this.handleSave}>Save</button>
+            </div> : "bla" }
+          </div>
+        </div>
+      </div>
 
-]      </div>
+    }
+      </div>
     </div>
 
     </div>
   }
-  <div className="ui inverted vertical footer segment">
-    <div className="ui center aligned container">
-    <div className="ui three column grid">
-        <div className="column">
-        </div>
-        <div className="column">
-          { this.props.imageText ? <button type="submit" className="ui basic green button" onClick={this.handleSave}>Save</button>  : <a href="/y/images"><i className="undo large icon"/></a>}
-        </div>
-        <div className="column">
-        </div>
-        </div>
-    </div>
-  </div>
   </div>
 
   )

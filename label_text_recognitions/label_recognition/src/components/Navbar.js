@@ -16,12 +16,14 @@ class Navbar extends React.Component {
           THRIFTY
         </h2>
       </Link>
+      <Link to={`/${this.props.name}/`} className="header item">
 
-        <Link to={`/${this.props.name}/images`} className="header item">
+    </Link>
+        {/*<Link to={`/${this.props.name}/images`} className="header item">
         <div className="ui inverted icon">
             <i className="image big icon "></i>
         </div>
-      </Link>
+      </Link>*/}
 
         <Link to={`/${this.props.name}/settings`} className="right menu">
         <div className="ui inverted icon rigth menu">
