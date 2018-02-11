@@ -151,7 +151,7 @@ footer.footer {
 }
 
 .ui.form textarea:not([rows]) {
-    height: 22em;
+    height: 20em;
     min-height: 8em;
 
 }

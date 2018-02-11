@@ -56,19 +56,23 @@ render(){
       <div className="row">
       <div className="ui inverted vertical footer segment">
         <div className="ui center aligned container">
-        <div className="ui two column grid">
+        <div className="ui three column grid">
             <div className="column">
-            {this.props.img ?
-            <div>
-            <a href="/y" className="circular ui large icon blue basic button" onClick={this.capture}>
+            <a href="/y/images" className="circular ui large icon blue basic button" onClick={this.capture}>
               <i className="undo icon"></i>
             </a>
-            </div> : "in img" }
             </div>
-            {this.props.img ? <div className="column">
+            <div className="column">
+            <a href="/y" className="circular ui large icon blue basic button" onClick={this.capture}>
+              <i className="grid layout icon"></i>
+            </a>
+            </div>
+            <div className="column">
               <button type="submit" className="ui basic green button" onClick={this.handleSave}>Save</button>
-            </div> : "bla" }
-          </div>
+            </div>
+            </div>
+
+
         </div>
       </div>
 
