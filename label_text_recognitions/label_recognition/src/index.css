@@ -30,9 +30,15 @@ footer.footer {
   height: 1.2em;
 }
 
-.scroll {
+.scroll-img {
     width: 100%;
     height: 43em;
+    overflow: scroll;
+}
+
+.scroll {
+    width: 100%;
+    height: 41em;
     overflow: scroll;
 }
 
@@ -80,7 +86,7 @@ footer.footer {
   z-index: -3;
 }*/
 
-.ui.grid>.row {
+/*.ui.grid>.row {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -99,7 +105,7 @@ footer.footer {
     align-items: stretch;
     width: 100%!important;
     padding-top: 1rem;
-}
+}*/
 
 .ui.footer.segment {
     position: absolute;
@@ -108,11 +114,10 @@ footer.footer {
     height: auto !important;
 }
 
-.ui.grid {
-    margin-top: -1rem;
-    margin-bottom: -1rem;
-    margin-left: -1rem;
-  }
+.ui.grid>.column:not(.row) {
+    padding-top: 1rem;
+}
+
 
 .image-card {
   width: 20%;
@@ -182,4 +187,9 @@ div.gallery img {
 .img-captured {
     float: left;
     padding-right: 2%;
+}
+
+.p-search {
+    margin-top: 1%;
+    padding-left: 2%;
 }

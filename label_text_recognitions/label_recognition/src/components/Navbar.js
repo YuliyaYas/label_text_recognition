@@ -28,6 +28,11 @@ class Navbar extends React.Component {
             <i className="settings large icon "></i>
         </div>
       </Link>
+      <Link to="/about" className="right menu">
+      <div className="ui inverted icon rigth menu">
+          <i className="help large icon "></i>
+      </div>
+      </Link>
         <a className="right menu"
         onClick={e => {
           e.preventDefault();

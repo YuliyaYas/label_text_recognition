@@ -36,7 +36,7 @@ const deleteImage = id => {
   return fetch(`${API_ROOT}/images/${id}`, {
     method: 'DELETE',
     headers
-    }).then(res => res.json());
+  }).then(res => res.json());
 }
 
 const getImages = () => {
