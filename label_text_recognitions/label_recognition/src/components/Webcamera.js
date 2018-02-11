@@ -115,15 +115,16 @@ import withAuth from '../hocs/withAuth'
           :
           <div className="ui inverted vertical footer segment">
             <div className="ui center aligned container">
-            <div className="ui three column grid">
+            <div className="ui two column grid">
                 <div className="column">
+                <Link to={`/${this.props.user}/images`} className="circular ui large icon blue basic button">
+                  <i className="grid layout icon"></i>
+                </Link>
                 </div>
                 <div className="column">
                 <button className="circular ui large icon blue basic button" onClick={this.capture}>
                   <i className="camera retro icon"></i>
                 </button>
-                </div>
-                <div className="column">
                 </div>
                 </div>
             </div>

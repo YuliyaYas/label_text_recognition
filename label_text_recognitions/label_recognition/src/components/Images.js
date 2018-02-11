@@ -21,9 +21,9 @@ const Images = (props) => {
           <div className="column">
           </div>
           <div className="column">
-          <button className="circular ui large icon blue basic button" onClick={this.capture}>
+          <a href="http://localhost:3001/y" className="circular ui large icon blue basic button">
             <i className="camera retro icon"></i>
-          </button>
+          </a>
           </div>
           <div className="column">
           </div>
