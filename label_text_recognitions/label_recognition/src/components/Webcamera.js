@@ -96,19 +96,37 @@ import withAuth from '../hocs/withAuth'
 
         {this.state.clicked
           ?
-          <div className="camera">
-          <button className="circular ui huge icon red basic button" onClick={this.refreshPage}>
-            <i className="undo red icon"></i>
-          </button>
-          <Link to={`/${this.props.user}/search`} className="circular ui huge icon green basic button" onClick={this.search}>
-            <i className="search green icon"></i>
-          </Link>
+          <div className="ui inverted vertical footer segment">
+            <div className="ui center aligned container">
+            <div className="ui two column grid">
+                <div className="column">
+                <button className="circular ui large icon red basic button" onClick={this.refreshPage}>
+                  <i className="undo red icon"></i>
+                </button>
+                </div>
+                <div className="column">
+                <Link to={`/${this.props.user}/search`} className="circular ui large icon green basic button" onClick={this.search}>
+                  <i className="search green icon"></i>
+                </Link>
+                </div>
+                </div>
+            </div>
           </div>
           :
-          <div className="camera">
-          <button className="circular ui massive icon blue basic button" onClick={this.capture}>
-            <i className="camera retro icon"></i>
-          </button>
+          <div className="ui inverted vertical footer segment">
+            <div className="ui center aligned container">
+            <div className="ui three column grid">
+                <div className="column">
+                </div>
+                <div className="column">
+                <button className="circular ui large icon blue basic button" onClick={this.capture}>
+                  <i className="camera retro icon"></i>
+                </button>
+                </div>
+                <div className="column">
+                </div>
+                </div>
+            </div>
           </div>
         }
     </div>

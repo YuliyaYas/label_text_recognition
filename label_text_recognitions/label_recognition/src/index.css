@@ -53,11 +53,13 @@ footer.footer {
     border-radius: 7px;
   }
 
-  .percentage-size{
-    height: 5em;
+  .percentage-size {
+    margin-top: 2%;
+    height: 5.7em;
     width: 100%;
-    padding: 4%
-  }
+    padding: 1%;
+    border-radius: 5px;
+}
 
   /*.indexWrapper {
     margin: auto;
@@ -149,9 +151,13 @@ footer.footer {
 }
 
 .ui.form textarea:not([rows]) {
-    height: 17em;
+    height: 22em;
     min-height: 8em;
-    max-height: 24em;
+
+}
+
+.ui.form input:not([type]){
+  margin: 1%;
 }
 
 div.gallery {

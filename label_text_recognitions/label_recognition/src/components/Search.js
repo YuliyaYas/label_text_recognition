@@ -35,7 +35,7 @@ render(){
        <div>
        {/*<p className="p-search" >Results that matches: {this.props.imageText.imageText.toLowerCase()}</p>*/}
        </div>
-       : "go back"}
+       : ""}
 
     </div>
     <div className="scroll">
