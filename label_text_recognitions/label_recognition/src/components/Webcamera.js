@@ -117,6 +117,7 @@ import withAuth from '../hocs/withAuth'
 }
 
 const mapStateToProps = (state) => {
+  console.log("in web", state);
   return {
     img: state.img,
     imageText: state.imageText,

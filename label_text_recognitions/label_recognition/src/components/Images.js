@@ -9,7 +9,7 @@ const Images = (props) => {
     <div>
       { props.images
         ?
-      <div>
+      <div className="scroll">
         {props.images.map((image, i) => <ImageCard image={image} key={i} />)}
       </div>
       :

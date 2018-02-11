@@ -29,7 +29,7 @@ class App extends Component {
       this.props.fetchUser();
     }
       this.props.fetchImages()
-      
+
 
 
   }
@@ -50,7 +50,7 @@ class App extends Component {
             <Route path="/faqs" component={FAQs} />
             <Route path="/careers" component={Careers} />
         </Switch>
-      <Footer />
+      {/*<Footer />*/}
     </div>
     );
   }

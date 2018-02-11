@@ -54,8 +54,8 @@ export const loginUser = (username, password, history) => dispatch => {
 
   adapter.auth.login({ username, password }).then(user => {
     if (user.error) {
-      dispatch({ type: 'LOGIN_ERROR' });
-      alert("WRONG HAHA")
+      dispatch({ type: 'LOGIN_ERROR', errors: user.error });
+      alert(user.error)
     }
     else {
     localStorage.setItem('token', user.jwt);
