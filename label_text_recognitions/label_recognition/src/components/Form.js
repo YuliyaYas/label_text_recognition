@@ -82,7 +82,7 @@ render(){
 }
 
 const mapStateToProps = (state) => {
-  console.log("state in FORM",state)
+  // console.log("state in FORM",state)
   return {
     newImage: state.newImage,
     name: state.auth.currentUser.username,

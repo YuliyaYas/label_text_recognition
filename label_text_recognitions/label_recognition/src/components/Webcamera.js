@@ -80,7 +80,7 @@ import withAuth from '../hocs/withAuth'
   }
 
   render() {
-    console.log("search", this.props);
+    // console.log("search", this.props);
     return (
       <div>
         {this.state.clicked ? <img alt="" className="capture-position" src={this.props.img.img} /> : <Webcam
@@ -135,7 +135,7 @@ import withAuth from '../hocs/withAuth'
 }
 
 const mapStateToProps = (state) => {
-  console.log("in web", state);
+  // console.log("in web", state);
   return {
     img: state.img,
     imageText: state.imageText,

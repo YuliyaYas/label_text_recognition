@@ -15,6 +15,21 @@ const Images = (props) => {
       :
       "Loading..."
     }
+    <div className="ui inverted vertical footer segment">
+      <div className="ui center aligned container">
+      <div className="ui three column grid">
+          <div className="column">
+          </div>
+          <div className="column">
+          <button className="circular ui large icon blue basic button" onClick={this.capture}>
+            <i className="camera retro icon"></i>
+          </button>
+          </div>
+          <div className="column">
+          </div>
+          </div>
+      </div>
+    </div>
     </div>)
 }
 

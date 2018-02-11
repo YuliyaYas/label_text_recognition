@@ -24,7 +24,7 @@ class Search extends React.Component {
 render(){
   const results = this.props.googleSearch
   const searchResults = results.map((r,i) => <SearchResult key = {i} result={r} />)
-  console.log("in search", this.props)
+  // console.log("in search", this.props)
   return(
   <div>
   {this.state.clicked ? <Form text={this.props.imageText.imageText} image={this.props.img.img}/> :
@@ -68,7 +68,7 @@ render(){
 }}
 
 const mapStateToProps = (state) => {
-  console.log("state",state);
+  // console.log("state",state);
   return {
     googleSearch: state.googleSearch,
     img: state.img,

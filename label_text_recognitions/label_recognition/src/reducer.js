@@ -61,7 +61,6 @@ const getAllImages = (state = null, action) => {
 const getAllSearches = (state = [], action) => {
   switch(action.type){
     case 'SET_SEARCH_RESULTS':
-    console.log("in reducer, action is", action)
       return action.results
     default:
      return state
