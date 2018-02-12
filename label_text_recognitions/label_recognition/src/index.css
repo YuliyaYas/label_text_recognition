@@ -1,11 +1,9 @@
 body {
-  margin: 0;
-  padding: 0;
   font-family: sans-serif;
-  background-image: url(./img/background.jpeg);
+  background-image: url(./img/background1.jpg);
+  background-size: auto 100%;
   background-repeat: no-repeat;
-  width: 100%;
-  height: auto;
+  background-position: left top;
 
 }
 
@@ -98,8 +96,9 @@ footer.footer {
   height: auto;
 }
 
-.form-style{
-  text-align: center;
+.form-style {
+    text-align: center;
+    margin-top: 13%;
 }
 
 .ui.form textarea:not([rows]) {

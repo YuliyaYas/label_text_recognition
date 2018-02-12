@@ -10,8 +10,6 @@ class Settings extends React.Component {
   render() {
   return (
     <form onSubmit={this.handleSubmit} className="form-style">
-        <label></label>
-      <br/>
       <div className="ui left icon input">
         <input name="password" type="password" placeholder="old password"  />
         <i className="lock icon"></i>
