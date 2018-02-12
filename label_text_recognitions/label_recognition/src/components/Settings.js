@@ -55,18 +55,18 @@ class Settings extends React.Component {
     <div id="toggle-form-1">
     <form onSubmit={this.handleSubmit} className="toggle-form-style">
       <div className="ui left icon input">
-        <input name="password" type="password" placeholder="old password"  />
-        <i className="lock icon"></i>
+        <input name="password" type="password" placeholder="old username"  />
+        <i className="user icon"></i>
       </div>
       <br/>
       <div className="ui left icon input">
-        <input name="password" type="password" placeholder="new password"  />
-        <i className="lock icon"></i>
+        <input name="password" type="password" placeholder="new username"  />
+        <i className="user icon"></i>
       </div>
       <br/>
       <div className="ui left icon input">
-        <input name="password" type="password" placeholder="confirm password"  />
-        <i className="lock icon"></i>
+        <input name="password" type="password" placeholder="confirm username"  />
+        <i className="user icon"></i>
       </div>
       <br/>
       <button type="submit" className="ui basic green button">
@@ -88,18 +88,18 @@ class Settings extends React.Component {
     <div id="toggle-form-2">
     <form onSubmit={this.handleSubmit} className="toggle-form-style">
       <div className="ui left icon input">
-        <input name="password" type="password" placeholder="old password"  />
-        <i className="lock icon"></i>
+        <input name="password" type="password" placeholder="old email"  />
+        <i className="mail icon"></i>
       </div>
       <br/>
       <div className="ui left icon input">
-        <input name="password" type="password" placeholder="new password"  />
-        <i className="lock icon"></i>
+        <input name="password" type="password" placeholder="new email"  />
+        <i className="mail icon"></i>
       </div>
       <br/>
       <div className="ui left icon input">
-        <input name="password" type="password" placeholder="confirm password"  />
-        <i className="lock icon"></i>
+        <input name="password" type="password" placeholder="confirm email"  />
+        <i className="mail icon"></i>
       </div>
       <br/>
       <button type="submit" className="ui basic green button">

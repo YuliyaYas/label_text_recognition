@@ -72,7 +72,7 @@ class Signup extends React.Component {
                 value={fields.email}
                 onChange={this.handleChange}
               />
-              <i className="lock icon"></i>
+              <i className="mail icon"></i>
             </div>
             <br />
             <button type="submit" className="ui basic green button">
