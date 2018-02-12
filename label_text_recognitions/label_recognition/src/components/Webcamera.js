@@ -9,7 +9,8 @@ import withAuth from '../hocs/withAuth'
   constructor(){
     super()
     this.state={
-      clicked: false
+      clicked: false,
+      error: false
     }
   }
 
@@ -58,11 +59,15 @@ import withAuth from '../hocs/withAuth'
     request.send(b)
     request.onload = () => {
       const jsonObj = JSON.parse(request.responseText)
+      if (jsonObj.responses[0].fullTextAnnotation){
+        debugger
       const imageText = jsonObj.responses[0].textAnnotations[0].description
       this.props.saveImageText(imageText)
       this.props.fetchSearchresult(imageText, this.props.history, this.props.user)
-      {/*      console.log("SEARCH RESULTS", this.props.fetchSearchresult(imageText));
-*/}
+    }
+      else if(jsonObj.responses[0].length === undefined) {
+      this.setState({error: true}, () => console.log(this.state.error))
+    }
     };
   }
 
@@ -93,7 +98,7 @@ import withAuth from '../hocs/withAuth'
           width={350}
         /> }
         <br />
-
+        {this.state.error ? <div className="ui blue message">Please try again! Unable to read the text</div> : ""}
         {this.state.clicked
           ?
           <div className="ui inverted vertical footer segment">
@@ -131,7 +136,7 @@ import withAuth from '../hocs/withAuth'
           </div>
         }
     </div>
-    );
+    )
   }
 }
 
