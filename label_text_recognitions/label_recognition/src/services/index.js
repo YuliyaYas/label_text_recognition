@@ -32,6 +32,15 @@ const postImage = data => {
   }).then(res => res.json());
 }
 
+const postUser = data => {
+  // debugger
+  return fetch(`${API_ROOT}/users/`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(data)
+  }).then(res => res.json());
+}
+
 const deleteImage = id => {
   return fetch(`${API_ROOT}/images/${id}`, {
     method: 'DELETE',
@@ -58,6 +67,7 @@ export const adapter = {
     postImage,
     getImages,
     deleteImage,
-    getSearchResult
+    getSearchResult,
+    postUser
   }
 };

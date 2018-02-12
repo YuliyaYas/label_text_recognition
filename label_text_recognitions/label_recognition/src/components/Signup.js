@@ -1,32 +1,34 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import * as actions from '../actions';
+import { connect } from 'react-redux';
 
 class Signup extends React.Component {
   constructor() {
     super();
     this.state = {
       error: false,
-      fields: {
-        username: '',
-        password: '',
-        confirmation_password: '',
-        email: ''
-      }
+      username: '',
+      password: '',
+      confirmation_password: '',
+      email: ''
     };
   }
 
   handleChange = e => {
-    const newFields = { ...this.state.fields, [e.target.name]: e.target.value };
-    this.setState({ fields: newFields });
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   handleSubmit = e => {
     e.preventDefault();
+    console.log(this.state);
+    if (this.state.password === this.state.confirmation_password) {
+      this.props.addUser({password: this.state.password, email: this.state.email, username:this.state.username}, this.props.history)
+    }
 
   };
 
   render() {
-    const { fields } = this.state;
     return (
       <div>
         {this.state.error ? <h1>Try Again</h1> : null}
@@ -36,7 +38,7 @@ class Signup extends React.Component {
               <input
                 name="username"
                 placeholder="username"
-                value={fields.username}
+                value={this.props.username}
                 onChange={this.handleChange}
               />
               <i className="user icon"></i>
@@ -47,7 +49,7 @@ class Signup extends React.Component {
                 name="password"
                 type="password"
                 placeholder="password"
-                value={fields.password}
+                value={this.props.password}
                 onChange={this.handleChange}
               />
               <i className="lock icon"></i>
@@ -55,10 +57,10 @@ class Signup extends React.Component {
             <br/>
             <div className="ui left icon input">
               <input
-                name="confirmation password"
-                type="confirmation password"
+                name="confirmation_password"
+                type="password"
                 placeholder="confirmation password"
-                value={fields.confirmation_password}
+                value={this.props.confirmation_password}
                 onChange={this.handleChange}
               />
               <i className="lock icon"></i>
@@ -69,7 +71,7 @@ class Signup extends React.Component {
                 name="email"
                 type="text"
                 placeholder="email"
-                value={fields.email}
+                value={this.props.email}
                 onChange={this.handleChange}
               />
               <i className="mail icon"></i>
@@ -85,4 +87,4 @@ class Signup extends React.Component {
   }
 }
 
-export default withRouter(Signup);
+export default withRouter(connect(null, actions)(Signup));

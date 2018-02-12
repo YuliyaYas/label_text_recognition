@@ -42,6 +42,15 @@ export const addImage = (data, history, user) => dispatch => {
   })
 };
 
+export const addUser = (data, history) => dispatch => {
+  debugger
+  dispatch({ type: 'ASYNC_START' });
+  adapter.auth.postUser(data).then(user => {
+    dispatch({ type: 'POST_USER', user });
+    history.push(`/login`)
+  })
+};
+
 export const deleteImg = (id) => dispatch => {
   dispatch({ type: 'ASYNC_START' });
   adapter.auth.deleteImage(id).then(image => {
