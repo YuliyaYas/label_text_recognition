@@ -24,7 +24,7 @@ class Search extends React.Component {
 render(){
   const results = this.props.googleSearch
   const searchResults = results.map((r,i) => <SearchResult key = {i} result={r} />)
-  console.log("in search", this.props)
+  console.log("in images in render", this);
   return(
   <div>
   {this.state.clicked ?
@@ -58,17 +58,21 @@ render(){
         <div className="ui center aligned container">
         <div className="ui three column grid">
             <div className="column">
-            <a href="/y/images" className="circular ui large icon blue basic button" onClick={this.capture}>
-              <i className="undo icon"></i>
+            <a href="/y" className="circular ui large icon blue basic button" onClick={this.capture}>
+              <i className="camera retro icon"></i>
             </a>
             </div>
             <div className="column">
-            <a href="/y" className="circular ui large icon blue basic button" onClick={this.capture}>
+            <a href="/y/images" className="circular ui large icon blue basic button" onClick={this.capture}>
               <i className="grid layout icon"></i>
             </a>
             </div>
             <div className="column">
-              <button type="submit" className="ui basic green button" onClick={this.handleSave}>Save</button>
+            {this.props.imageText ?
+                <button type="submit" className="ui basic green button" onClick={this.handleSave}>Save</button>
+                :
+                ""
+              }
             </div>
             </div>
 
@@ -88,11 +92,12 @@ render(){
 }}
 
 const mapStateToProps = (state) => {
-  // console.log("state",state);
+  console.log("in search state in map", state);
   return {
     googleSearch: state.googleSearch,
     img: state.img,
-    imageText: state.imageText
+    imageText: state.imageText,
+    images: state.images
   }
 }
 

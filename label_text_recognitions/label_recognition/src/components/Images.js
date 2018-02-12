@@ -34,6 +34,7 @@ const Images = (props) => {
 }
 
 const mapStateToProps = (state) => {
+  // console.log("in images", state);
   return {
     images: state.images
   }

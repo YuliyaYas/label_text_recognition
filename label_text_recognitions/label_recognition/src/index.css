@@ -61,54 +61,6 @@ footer.footer {
     border-radius: 5px;
 }
 
-  /*.indexWrapper {
-    margin: auto;
-  }
-
-  .maxImageTile {
-  background-size: cover;
-  width: 50%;
-  height: 200px;
-}
-
-.imgTile {
-  display: inline;
-  background-repeat: no-repeat;
-  background-position: center 90%;
-  float: left;
-  transition: 0.75s;
-  opacity: 1;
-}
-
-.maxBackgroundSneak {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  background-size: cover;
-  z-index: -3;
-}*/
-
-/*.ui.grid>.row {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: inherit;
-    -ms-flex-pack: inherit;
-    justify-content: inherit;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    width: 100%!important;
-    padding-top: 1rem;
-}*/
-
 .ui.footer.segment {
     position: absolute;
     bottom: 0;
@@ -198,4 +150,31 @@ div.gallery img {
 .p-search {
     margin-top: 1%;
     padding-left: 2%;
+}
+
+
+element.style {
+}
+semantic.min.css:91
+.ui[class*="left icon"].input>input {
+    padding-left: 2.671429em!important;
+    padding-right: 7em!important;
+    margin: 1%;
+}
+semantic.min.css:91
+.ui.icon.input input {
+    padding-right: 2.67142857em!important;
+}
+semantic.min.css:91
+.ui.input input {
+    padding: 0.9em 11em;
+}
+.ui[class*="left icon"].input>input {
+    padding-left: 2.671429em!important;
+    padding-right: 7em!important;
+    margin: 1%;
+}
+
+login{
+  top: 100px;
 }

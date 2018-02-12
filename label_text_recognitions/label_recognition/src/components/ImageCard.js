@@ -7,7 +7,6 @@ import { withRouter } from 'react-router-dom';
 
 
 const ImageCard = (props) => {
-  console.log("in card", props);
   return(
     <div className="ui segment-1 clearfix" id={props.image.otr} >
     <i className="right floated grey delete icon" id={props.image.id} type="submit" onClick={() => props.deleteImg(props.image.id)}></i>

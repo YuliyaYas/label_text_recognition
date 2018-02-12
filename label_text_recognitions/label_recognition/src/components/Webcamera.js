@@ -60,7 +60,6 @@ import withAuth from '../hocs/withAuth'
     request.onload = () => {
       const jsonObj = JSON.parse(request.responseText)
       if (jsonObj.responses[0].fullTextAnnotation){
-        debugger
       const imageText = jsonObj.responses[0].textAnnotations[0].description
       this.props.saveImageText(imageText)
       this.props.fetchSearchresult(imageText, this.props.history, this.props.user)
@@ -98,7 +97,7 @@ import withAuth from '../hocs/withAuth'
           width={350}
         /> }
         <br />
-        {this.state.error ? <div className="ui blue message">Please try again! Unable to read the text</div> : ""}
+        {this.state.error ? <div className="ui blue camera message">Please try again! Unable to read the text</div> : ""}
         {this.state.clicked
           ?
           <div className="ui inverted vertical footer segment">
