@@ -9,6 +9,7 @@ class Settings extends React.Component {
 
   render() {
   return (
+    <div>
     <form onSubmit={this.handleSubmit} className="form-style">
       <div className="ui left icon input">
         <input name="password" type="password" placeholder="old password"  />
@@ -29,6 +30,23 @@ class Settings extends React.Component {
         Update password
       </button>
     </form>
+    <div className="ui inverted vertical footer segment">
+      <div className="ui center aligned container">
+      <div className="ui two column grid">
+          <div className="column">
+          <a href={`/y/images`} className="circular ui large icon blue basic button">
+            <i className="grid layout icon"></i>
+          </a>
+          </div>
+          <div className="column">
+          <a href="/y"className="circular ui large icon blue basic button">
+            <i className="camera retro icon"></i>
+          </a>
+          </div>
+          </div>
+      </div>
+    </div>
+    </div>
 
   )
 }
