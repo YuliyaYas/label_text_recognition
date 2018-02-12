@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-image: url(./img/background1.jpg);
+  background-image: url(./img/background.jpeg);
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: left top;
@@ -47,7 +47,6 @@ footer.footer {
 
 .ui.large.form {
     font-size: 1.14285714rem;
-    background: rgba(255,255,255, 0.6);
     border-radius: 7px;
   }
 
@@ -174,6 +173,22 @@ semantic.min.css:91
     margin: 1%;
 }
 
-login{
-  top: 100px;
+.ui.basic.green.button, .ui.basic.green.buttons .button {
+    box-shadow: 0 0 0 1px #21ba45 inset!important;
+    color: #21ba45!important;
+    margin-top: 3%;
+}
+
+.ui.segment-1 {
+    position: relative;
+    background: rgba(255,255,255, 0.7);
+    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+    /* margin: 1rem 0; */
+    padding: 1em 1em;
+    border-radius: .28571429rem;
+    border: 1px solid rgba(34,36,38,.15);
+}
+
+.first-letter{
+   text-transform: capitalize;
 }

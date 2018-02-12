@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return(
-    <div className="ui segment">
+    <div className="ui segment-1">
       <h3 className="ui left floated header">How to use the app?</h3>
       <div className="ui clearing divider"></div>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at luctus tellus, vitae pulvinar dui. Nullam id leo metus. Vestibulum sed sollicitudin elit. Nullam interdum commodo blandit. Sed iaculis, urna sit amet ultrices placerat, dui nisi consequat nibh, non auctor erat lacus ac ligula.
