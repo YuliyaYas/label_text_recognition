@@ -142,7 +142,8 @@ div.gallery img {
 
 .img-captured {
     float: left;
-    padding-right: 2%;
+    margin-right: 3%;
+    border-radius: 4px;
 }
 
 .p-search {
