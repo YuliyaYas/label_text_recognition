@@ -38,7 +38,7 @@ class Login extends React.Component {
                 placeholder="username"
                 value={fields.username}
                 onChange={this.handleChange}
-              />
+              required/>
               <i className="user icon"></i>
             </div>
             <br/>
@@ -49,7 +49,7 @@ class Login extends React.Component {
                 placeholder="password"
                 value={fields.password}
                 onChange={this.handleChange}
-              />
+              required/>
               <i className="lock icon"></i>
             </div>
             <br/>
@@ -57,6 +57,21 @@ class Login extends React.Component {
               Login
             </button>
           </form>
+          <div className="ui inverted vertical footer segment">
+            <div className="ui center aligned container">
+            <div className="ui three column grid">
+                <div className="column">
+                </div>
+                <div className="column">
+                <a href="/about" className="ui inverted icon rigth menu">
+                  <i className="help large icon "></i>
+                </a>
+                </div>
+                <div className="column">
+                </div>
+                </div>
+            </div>
+          </div>
       </div>
     );
   }

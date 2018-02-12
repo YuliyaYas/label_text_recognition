@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import withAuth from '../hocs/withAuth';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
 
 class Form extends React.Component {

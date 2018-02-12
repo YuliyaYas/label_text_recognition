@@ -193,3 +193,40 @@ semantic.min.css:91
 .first-letter{
    text-transform: capitalize;
 }
+
+#toggle-form {
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+  display: none;
+}
+
+#toggle-form-1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+  display: none;
+}
+#toggle-form-2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+  display: none;
+}
+
+.center-text{
+  text-align: center;
+}
+
+.toggle-form-style {
+    text-align: center;
+}
+
+.ui.horizontal.divider {
+    display: table;
+    white-space: nowrap;
+    height: auto;
+    line-height: 1;
+    text-align: center;
+    padding: 11%;
+}

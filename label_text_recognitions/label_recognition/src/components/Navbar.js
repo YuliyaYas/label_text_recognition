@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux'
-import * as actions from '../actions'
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 import { withRouter } from 'react-router-dom';
 
 class Navbar extends React.Component {

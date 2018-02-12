@@ -1,6 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 const About = () => {
+  console.log("in about props:", this.props);
   return(
     <div>
     <div className="ui segment-1">
@@ -27,7 +30,7 @@ const About = () => {
             </a>
             </div>
             <div className="column">
-            <a href="/y"className="circular ui large icon blue basic button">
+            <a href="/y" className="circular ui large icon blue basic button">
               <i className="camera retro icon"></i>
             </a>
             </div>
@@ -38,4 +41,12 @@ const About = () => {
   )
 }
 
-export default About;
+const mapStateToProps = (state) => {
+  console.log("in about", state.auth.currentUser.username);
+  return {
+    id: state.auth.currentUser.id,
+    name: state.auth.currentUser.username
+  }
+}
+
+export default connect(mapStateToProps, actions)(About);

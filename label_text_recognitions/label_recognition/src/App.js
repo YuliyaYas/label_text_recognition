@@ -11,7 +11,7 @@ import Search from './components/Search';
 import {Route, Switch } from 'react-router-dom';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import { connect } from 'react-redux';
 import * as actions from './actions';
 import { withRouter } from 'react-router-dom';

@@ -3,7 +3,7 @@ import Webcam from 'react-webcam';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 import { Link } from 'react-router-dom';
-import withAuth from '../hocs/withAuth'
+import withAuth from '../hocs/withAuth';
 
  class Webcamera extends Component {
   constructor(){
