@@ -34,6 +34,8 @@ class Signup extends React.Component {
         {this.state.error ? <h1>Try Again</h1> : null}
         <div className="ui form form-style">
           <form onSubmit={this.handleSubmit}>
+          <label> </label>
+          <br/>
             <div className="ui left icon input">
               <input
                 name="username"

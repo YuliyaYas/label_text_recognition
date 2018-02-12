@@ -31,8 +31,9 @@ class Login extends React.Component {
     return (
       <div >
         {this.state.error ? <h1>Try Again</h1> : null}
-        <div className="ui form ">
           <form className="form-style" onSubmit={this.handleSubmit}>
+          <label> </label>
+          <br/>
             <div className="ui left icon input">
               <input
                 name="username"
@@ -58,7 +59,6 @@ class Login extends React.Component {
               Login
             </button>
           </form>
-        </div>
       </div>
     );
   }
