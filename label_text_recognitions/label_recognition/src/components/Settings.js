@@ -1,5 +1,7 @@
 import React from 'react';
 import withAuth from '../hocs/withAuth';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 class Settings extends React.Component {
 
@@ -113,12 +115,12 @@ class Settings extends React.Component {
       <div className="ui center aligned container">
       <div className="ui two column grid">
           <div className="column">
-          <a href={`/y/images`} className="circular ui large icon blue basic button">
+          <a href={`/${this.props.name}/images`} className="circular ui large icon blue basic button">
             <i className="grid layout icon"></i>
           </a>
           </div>
           <div className="column">
-          <a href="/y"className="circular ui large icon blue basic button">
+          <a href={`${this.props.name}`} className="circular ui large icon blue basic button">
             <i className="camera retro icon"></i>
           </a>
           </div>
@@ -130,5 +132,11 @@ class Settings extends React.Component {
   )
 }
 }
+const mapStateToProps = (state) => {
+  console.log("in settings", state);
+  return {
+    name: state.auth.currentUser.username
+  }
+}
 
-export default withAuth(Settings);
+export default withAuth(connect(mapStateToProps, actions)(Settings));

@@ -10,7 +10,7 @@ const Images = (props) => {
       { props.images
         ?
       <div className="scroll-img">
-        {props.images.map((image, i) => <ImageCard image={image} key={i} />)}
+        {props.images.map((image, i) => <ImageCard image={image} key={i} name={props.name}/>)}
       </div>
       :
       "Loading..."
@@ -36,7 +36,8 @@ const Images = (props) => {
 const mapStateToProps = (state) => {
   // console.log("in images", state);
   return {
-    images: state.images
+    images: state.images,
+    name: state.auth.currentUser.username
   }
 }
 

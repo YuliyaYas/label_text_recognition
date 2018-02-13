@@ -41,13 +41,6 @@ render(){
               <img className="percentage-size" width="130" height="130" alt="" src={this.props.image}/>
             </div>
           <div className="eleven wide column">
-            {/*<div className="ui fluid left icon input" onChange={this.handleChange}>
-              <input
-                placeholder="image name"
-                value={this.state.name}
-                name="name"></input>
-              <i className="write icon"></i>
-            </div>*/}
             <div className="ui fluid left icon input" onChange={this.handleChange}>
               <input
                 placeholder="price"

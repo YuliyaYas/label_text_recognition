@@ -22,7 +22,7 @@ class Search extends React.Component {
 render(){
   const results = this.props.googleSearch
   const searchResults = results.map((r,i) => <SearchResult key = {i} result={r} />)
-  console.log("in images in render", this);
+  console.log("in images in render", this.props.name);
   return(
   <div>
   {this.state.clicked ?
@@ -32,12 +32,12 @@ render(){
         <div className="ui center aligned container">
         <div className="ui two column grid">
             <div className="column">
-            <a href={`/y/images`} className="circular ui large icon blue basic button">
+            <a href={`/${this.props.name}}/images`} className="circular ui large icon blue basic button">
               <i className="grid layout icon"></i>
             </a>
             </div>
             <div className="column">
-            <a href="/y"className="circular ui large icon blue basic button">
+            <a href={`${this.props.name}`} className="circular ui large icon blue basic button">
               <i className="camera retro icon"></i>
             </a>
             </div>
@@ -56,12 +56,12 @@ render(){
         <div className="ui center aligned container">
         <div className="ui three column grid">
             <div className="column">
-            <a href="/y" className="circular ui large icon blue basic button" onClick={this.capture}>
+            <a href={`${this.props.name}`} className="circular ui large icon blue basic button" onClick={this.capture}>
               <i className="camera retro icon"></i>
             </a>
             </div>
             <div className="column">
-            <a href="/y/images" className="circular ui large icon blue basic button" onClick={this.capture}>
+            <a href={`/${this.props.name}/images`} className="circular ui large icon blue basic button" onClick={this.capture}>
               <i className="grid layout icon"></i>
             </a>
             </div>
@@ -95,7 +95,8 @@ const mapStateToProps = (state) => {
     googleSearch: state.googleSearch,
     img: state.img,
     imageText: state.imageText,
-    images: state.images
+    images: state.images,
+    name: state.auth.currentUser.username
   }
 }
 
