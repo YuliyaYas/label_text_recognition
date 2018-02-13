@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import results from './searchres';
 import SearchResult from './SearchResult';
 import Form from './Form';
 import withAuth from '../hocs/withAuth';
@@ -11,7 +10,6 @@ class Search extends React.Component {
   constructor(){
     super()
     this.state = {
-      results,
       clicked: false
     }
   }

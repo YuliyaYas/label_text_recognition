@@ -5,8 +5,6 @@ import Images from './components/Images';
 import Webcamera from './components/Webcamera';
 import Settings from './components/Settings';
 import About from './components/About';
-import FAQs from './components/FAQs';
-import Careers from './components/Careers';
 import Search from './components/Search';
 import {Route, Switch } from 'react-router-dom';
 import Login from './components/Login';
@@ -47,8 +45,6 @@ class App extends Component {
             <Route path={`/${this.props.name}/search`} component={Search} />
             <Route path={`/${this.props.name}`} component={Webcamera} />
             <Route path="/about" component={About} />
-            <Route path="/faqs" component={FAQs} />
-            <Route path="/careers" component={Careers} />
         </Switch>
       {/*<Footer />*/}
     </div>
