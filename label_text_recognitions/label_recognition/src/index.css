@@ -240,3 +240,7 @@ semantic.min.css:91
 .blue-color{
   color: blue;
 }
+
+.ui.blue.message {
+    top: 10%;
+}
