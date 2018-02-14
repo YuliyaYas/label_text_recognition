@@ -213,6 +213,12 @@ semantic.min.css:91
   margin-top: 2%;
   display: none;
 }
+#toggle-form-3 {
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+  display: none;
+}
 
 .center-text{
   text-align: center;

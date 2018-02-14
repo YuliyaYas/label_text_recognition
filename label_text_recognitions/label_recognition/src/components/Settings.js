@@ -109,7 +109,24 @@ class Settings extends React.Component {
       </button>
     </form>
     </div>
-
+    <p className="center-text ui horizontal divider" onClick={()=>
+      {
+      const x = document.getElementById("toggle-form-3");
+      if (x.style.display === "block") {
+          x.style.display = "none";
+      } else {
+          x.style.display = "block";
+      }
+      }
+    }>DELETE PROFILE</p>
+    <div id="toggle-form-3">
+    <form onSubmit={this.handleDelete} className="toggle-form-style">
+      <p>Are you sure you want to delete your profile? </p>
+      <button type="submit" className="ui red green button">
+        DELETE
+      </button>
+    </form>
+    </div>
     </div>
     <div className="ui inverted vertical footer segment">
       <div className="ui center aligned container">
