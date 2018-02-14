@@ -5,8 +5,22 @@ import * as actions from '../actions';
 
 class Settings extends React.Component {
 
-  handleSubmit = (e) => {
-    e.preventDefault()
+  handlePasswordChange = (e) => {
+    e.preventDefault();
+  }
+
+  handleUsernameChange = (e) => {
+    e.preventDefault();
+  }
+
+  handleEmailChange = (e) => {
+    e.preventDefault();
+  }
+
+  handleDelete = (e) => {
+    e.preventDefault();
+    alert("Are you sure you want to delete your profile?")
+
   }
 
   render() {
@@ -23,7 +37,7 @@ class Settings extends React.Component {
       }
     }>change password</p>
     <div id="toggle-form">
-    <form onSubmit={this.handleSubmit} className="toggle-form-style">
+    <form onSubmit={this.handlePasswordChange} className="toggle-form-style">
       <div className="ui left icon input">
         <input name="password" type="password" placeholder="old password"  />
         <i className="lock icon"></i>
@@ -55,7 +69,7 @@ class Settings extends React.Component {
       }
     }>change username</p>
     <div id="toggle-form-1">
-    <form onSubmit={this.handleSubmit} className="toggle-form-style">
+    <form onSubmit={this.handleUsernameChange} className="toggle-form-style">
       <div className="ui left icon input">
         <input name="password" type="password" placeholder="old username"  />
         <i className="user icon"></i>
@@ -88,7 +102,7 @@ class Settings extends React.Component {
       }
     }>change email</p>
     <div id="toggle-form-2">
-    <form onSubmit={this.handleSubmit} className="toggle-form-style">
+    <form onSubmit={this.handleEmailChange} className="toggle-form-style">
       <div className="ui left icon input">
         <input name="password" type="password" placeholder="old email"  />
         <i className="mail icon"></i>
@@ -121,7 +135,7 @@ class Settings extends React.Component {
     }>DELETE PROFILE</p>
     <div id="toggle-form-3">
     <form onSubmit={this.handleDelete} className="toggle-form-style">
-      <p>Are you sure you want to delete your profile? </p>
+      <p className="blue-color">Ones you delete the profile you will not be able to renew it</p>
       <button type="submit" className="ui red green button">
         DELETE
       </button>

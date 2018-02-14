@@ -14,6 +14,7 @@ class Images extends React.Component{
   }
 
   render(){
+    console.log(this.props.images);
   return(
     <div>
       { this.props.images
@@ -44,7 +45,7 @@ class Images extends React.Component{
 }
 
 const mapStateToProps = (state) => {
-  console.log("in images", state);
+  // console.log("in images", state);
   return {
     images: state.images,
     name: state.auth.currentUser.username,

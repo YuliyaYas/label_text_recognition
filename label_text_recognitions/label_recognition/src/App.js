@@ -32,7 +32,7 @@ class App extends Component {
 
 
   render() {
-    console.log("props", this.props.id, "state", this.state)
+    // console.log("props", this.props.id, "state", this.state)
     return (
       <div className="App">
         <Navbar />
