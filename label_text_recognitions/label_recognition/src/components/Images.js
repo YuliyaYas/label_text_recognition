@@ -4,13 +4,22 @@ import ImageCard from './ImageCard';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-const Images = (props) => {
+class Images extends React.Component{
+  constructor(){
+    super()
+  }
+
+  componentDidMount() {
+      this.props.fetchImages(this.props.id)
+  }
+
+  render(){
   return(
     <div>
-      { props.images
+      { this.props.images
         ?
       <div className="scroll-img">
-        {props.images.map((image, i) => <ImageCard image={image} key={i} name={props.name}/>)}
+        {this.props.images.map((image, i) => <ImageCard image={image} key={i} name={this.props.name}/>)}
       </div>
       :
       "Loading..."
@@ -21,7 +30,7 @@ const Images = (props) => {
           <div className="column">
           </div>
           <div className="column">
-          <a href={`${props.name}`} className="circular ui large icon blue basic button">
+          <a href={`${this.props.name}`} className="circular ui large icon blue basic button">
             <i className="camera retro icon"></i>
           </a>
           </div>
@@ -31,13 +40,15 @@ const Images = (props) => {
       </div>
     </div>
     </div>)
+  }
 }
 
 const mapStateToProps = (state) => {
-  // console.log("in images", state);
+  console.log("in images", state);
   return {
     images: state.images,
-    name: state.auth.currentUser.username
+    name: state.auth.currentUser.username,
+    id: state.auth.currentUser.id
   }
 }
 

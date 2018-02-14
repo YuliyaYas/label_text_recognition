@@ -144,7 +144,8 @@ const mapStateToProps = (state) => {
   return {
     img: state.img,
     imageText: state.imageText,
-    user: state.auth.currentUser.username
+    user: state.auth.currentUser.username,
+    id: state.auth.currentUser.id
   }
 }
 

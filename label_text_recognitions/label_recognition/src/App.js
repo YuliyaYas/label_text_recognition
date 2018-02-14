@@ -28,7 +28,6 @@ class App extends Component {
     if (localStorage.getItem('token')) {
       this.props.fetchUser();
     }
-      this.props.fetchImages(4)
   }
 
 
@@ -46,7 +45,6 @@ class App extends Component {
             <Route path={`/${this.props.name}`} component={Webcamera} />
             <Route path="/about" component={About} />
         </Switch>
-      {/*<Footer />*/}
     </div>
     );
   }

@@ -24,6 +24,8 @@ class Signup extends React.Component {
     console.log(this.state);
     if (this.state.password === this.state.confirmation_password) {
       this.props.addUser({password: this.state.password, email: this.state.email, username:this.state.username}, this.props.history)
+      debugger
+      this.props.loginUser(this.state.username, this.state.password, this.props.history)
     }
 
   };
@@ -40,6 +42,7 @@ class Signup extends React.Component {
                 placeholder="username"
                 value={this.props.username}
                 onChange={this.handleChange}
+                required
               />
               <i className="user icon"></i>
             </div>
@@ -51,6 +54,7 @@ class Signup extends React.Component {
                 placeholder="password"
                 value={this.props.password}
                 onChange={this.handleChange}
+                required
               />
               <i className="lock icon"></i>
             </div>
@@ -62,6 +66,7 @@ class Signup extends React.Component {
                 placeholder="confirmation password"
                 value={this.props.confirmation_password}
                 onChange={this.handleChange}
+                required
               />
               <i className="lock icon"></i>
             </div>
@@ -73,6 +78,7 @@ class Signup extends React.Component {
                 placeholder="email"
                 value={this.props.email}
                 onChange={this.handleChange}
+                required
               />
               <i className="mail icon"></i>
             </div>
