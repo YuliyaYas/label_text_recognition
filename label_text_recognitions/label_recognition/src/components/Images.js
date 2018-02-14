@@ -14,13 +14,14 @@ class Images extends React.Component{
   }
 
   render(){
-    console.log(this.props.images);
+    console.log("in img ", this.props.images);
   return(
     <div>
       { this.props.images
         ?
       <div className="scroll-img">
-        {this.props.images.map((image, i) => <ImageCard image={image} key={i} name={this.props.name}/>)}
+      {(this.props.images.length === 0) ? "0" : this.props.images.map((image, i) => <ImageCard image={image} key={i} name={this.props.name}/>)}
+
       </div>
       :
       "Loading..."
