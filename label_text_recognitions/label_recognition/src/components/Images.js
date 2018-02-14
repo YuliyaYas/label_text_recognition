@@ -21,7 +21,7 @@ const Images = (props) => {
           <div className="column">
           </div>
           <div className="column">
-          <a href="http://localhost:3001/y" className="circular ui large icon blue basic button">
+          <a href={`${props.name}`} className="circular ui large icon blue basic button">
             <i className="camera retro icon"></i>
           </a>
           </div>

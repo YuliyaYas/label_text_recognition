@@ -18,9 +18,9 @@ export const fetchUser = () => dispatch => {
   });
 };
 
-export const fetchImages = () => dispatch => {
+export const fetchImages = (id) => dispatch => {
   dispatch({ type: 'ASYNC_START' });
-  adapter.auth.getImages().then(images => {
+  adapter.auth.getImages(id).then(images => {
     dispatch({ type: 'SET_CURRENT_IMAGES', images });
   });
 };
@@ -43,7 +43,6 @@ export const addImage = (data, history, user) => dispatch => {
 };
 
 export const addUser = (data, history) => dispatch => {
-  debugger
   dispatch({ type: 'ASYNC_START' });
   adapter.auth.postUser(data).then(user => {
     dispatch({ type: 'POST_USER', user });

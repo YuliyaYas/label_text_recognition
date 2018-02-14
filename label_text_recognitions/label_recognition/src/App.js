@@ -19,21 +19,21 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      images: []
+      images: [],
+      id: ""
     }
   }
+
   componentDidMount() {
     if (localStorage.getItem('token')) {
       this.props.fetchUser();
     }
-      this.props.fetchImages()
-
-
-
+      this.props.fetchImages(4)
   }
 
 
   render() {
+    console.log("props", this.props.id, "state", this.state)
     return (
       <div className="App">
         <Navbar />
@@ -52,9 +52,10 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   loggedIn: !!state.auth.currentUser.id,
-  name: state.auth.currentUser.username
+  name: state.auth.currentUser.username,
+  id: state.auth.currentUser.id
 });
 
 export default withRouter(connect(mapStateToProps, actions)(App));

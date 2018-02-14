@@ -48,8 +48,8 @@ const deleteImage = id => {
   }).then(res => res.json());
 }
 
-const getImages = () => {
-  return fetch(`${API_ROOT}/users/4`)
+const getImages = (id) => {
+  return fetch(`${API_ROOT}/users/${id}`)
   .then(res => res.json())
   .then(json => json.images)
 }
