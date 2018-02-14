@@ -82,6 +82,21 @@ class Signup extends React.Component {
             </button>
           </form>
         </div>
+        <div className="ui inverted vertical footer segment">
+          <div className="ui center aligned container">
+          <div className="ui three column grid">
+              <div className="column">
+              </div>
+              <div className="column">
+              <a href="/about" className="circular ui large icon blue basic button">
+                <i className="help large icon "></i>
+              </a>
+              </div>
+              <div className="column">
+              </div>
+              </div>
+          </div>
+        </div>
       </div>
     );
   }

@@ -63,7 +63,7 @@ class Login extends React.Component {
                 <div className="column">
                 </div>
                 <div className="column">
-                <a href="/about" className="ui inverted icon rigth menu">
+                <a href="/about" className="circular ui large icon blue basic button">
                   <i className="help large icon "></i>
                 </a>
                 </div>
