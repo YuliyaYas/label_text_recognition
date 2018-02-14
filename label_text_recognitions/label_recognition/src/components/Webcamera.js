@@ -40,7 +40,7 @@ import withAuth from '../hocs/withAuth';
   }
 
   refreshPage(){
-    window.location.pathname = `/${this.props.user}`;
+    window.location.pathname = window.location.pathname;
   }
 
   search = (e) => {

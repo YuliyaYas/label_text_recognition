@@ -30,7 +30,7 @@ class Login extends React.Component {
     const { fields } = this.state;
     return (
       <div >
-        {this.state.error ? <h1>Try Again</h1> : null}
+        {this.props.error ? <div className="ui blue camera message">{this.props.error}</div> : null}
           <form className="form-style" onSubmit={this.handleSubmit}>
             <div className="ui left icon input">
               <input
@@ -77,4 +77,11 @@ class Login extends React.Component {
   }
 }
 
-export default withRouter(connect(null, actions)(Login));
+const mapStateToProps = (state) => {
+  console.log("in login", state);
+  return {
+    error: state.auth.login_error
+  }
+}
+
+export default withRouter(connect(mapStateToProps, actions)(Login));
