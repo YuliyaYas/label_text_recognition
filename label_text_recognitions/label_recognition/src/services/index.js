@@ -47,6 +47,13 @@ const deleteImage = id => {
   }).then(res => res.json());
 }
 
+const deleteUser = id => {
+  return fetch(`${API_ROOT}/users/${id}`, {
+    method: 'DELETE',
+    headers
+  }).then(res => res.json());
+}
+
 const getImages = (id) => {
   return fetch(`${API_ROOT}/users/${id}`)
   .then(res => res.json())
@@ -67,6 +74,7 @@ export const adapter = {
     getImages,
     deleteImage,
     getSearchResult,
-    postUser
+    postUser,
+    deleteUser
   }
 };

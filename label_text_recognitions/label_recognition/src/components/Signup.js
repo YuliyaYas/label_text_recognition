@@ -27,11 +27,13 @@ class Signup extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
     if (this.state.password === this.state.confirmation_password) {
       this.props.addUser({password: this.state.password, email: this.state.email, username:this.state.username}, this.props.history)
       // debugger
       this.props.loginUser(this.state.username, this.state.password, this.props.history)
+    }
+    else{
+      this.setState({error: true})
     }
 
   };
@@ -39,7 +41,7 @@ class Signup extends React.Component {
   render() {
     return (
       <div>
-        {this.state.error ? <h1>Try Again</h1> : null}
+      {(this.state.error) ? <div className="ui blue camera message">Your passwords do not match. Try again!</div> : null}
         <div className="ui form form-style">
           <form onSubmit={this.handleSubmit}>
             <div className="ui left icon input">
@@ -114,4 +116,10 @@ class Signup extends React.Component {
   }
 }
 
-export default withRouter(connect(null, actions)(Signup));
+const mapStateToProps = (state) => {
+  console.log("in signup", state)
+  return{
+
+  }
+}
+export default withRouter(connect(mapStateToProps, actions)(Signup));

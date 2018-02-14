@@ -13,6 +13,9 @@ const authReducer = (state = initialState, action) => {
       return {...state, currentUser: {}, login_error: action.errors};
     case 'POST_USER':
       return {...state, user: action.user}
+    case 'DELETE_USER':
+      const users = state.filter(user => user.id !== action.user.id)
+      return users
     default:
       return state;
   }
@@ -54,7 +57,8 @@ const getAllImages = (state = null, action) => {
       const images = state.filter(image => image.id !== action.image.id)
       return images
     case 'POST_IMAGE':
-      return [...state, action.image]
+    debugger
+      return [action.image]
     default:
      return state
   }

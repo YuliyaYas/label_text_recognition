@@ -78,7 +78,7 @@ class Login extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log("in login", state);
+  // console.log("in login", state);
   return {
     error: state.auth.login_error
   }

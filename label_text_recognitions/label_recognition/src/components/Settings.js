@@ -19,7 +19,8 @@ class Settings extends React.Component {
 
   handleDelete = (e) => {
     e.preventDefault();
-    alert("Are you sure you want to delete your profile?")
+    alert(this.props.id)
+    this.props.deleteAUser(this.props.id)
 
   }
 
@@ -166,7 +167,8 @@ class Settings extends React.Component {
 const mapStateToProps = (state) => {
   console.log("in settings", state);
   return {
-    name: state.auth.currentUser.username
+    name: state.auth.currentUser.username,
+    id: state.auth.currentUser.id
   }
 }
 
