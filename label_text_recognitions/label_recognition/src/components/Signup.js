@@ -15,6 +15,12 @@ class Signup extends React.Component {
     };
   }
 
+  componentDidMount() {
+    if (localStorage.getItem('token')) {
+      this.props.fetchUser();
+    }
+  }
+
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -24,7 +30,7 @@ class Signup extends React.Component {
     console.log(this.state);
     if (this.state.password === this.state.confirmation_password) {
       this.props.addUser({password: this.state.password, email: this.state.email, username:this.state.username}, this.props.history)
-      debugger
+      // debugger
       this.props.loginUser(this.state.username, this.state.password, this.props.history)
     }
 

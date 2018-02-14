@@ -33,7 +33,6 @@ const postImage = data => {
 }
 
 const postUser = data => {
-  // debugger
   return fetch(`${API_ROOT}/users/`, {
     method: 'POST',
     headers,
