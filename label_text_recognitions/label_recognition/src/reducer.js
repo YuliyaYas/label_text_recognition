@@ -57,7 +57,6 @@ const getAllImages = (state = null, action) => {
       const images = state.filter(image => image.id !== action.image.id)
       return images
     case 'POST_IMAGE':
-    debugger
       return [action.image]
     default:
      return state
@@ -68,6 +67,8 @@ const getAllSearches = (state = [], action) => {
   switch(action.type){
     case 'SET_SEARCH_RESULTS':
       return action.results
+    case 'SEARCH_ERROR':
+      return action.errors
     default:
      return state
   }

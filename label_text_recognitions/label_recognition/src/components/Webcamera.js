@@ -97,7 +97,7 @@ import withAuth from '../hocs/withAuth';
           width={350}
         /> }
         <br />
-        {this.state.error ? <div className="ui blue camera message">Please try again! Unable to read the text</div> : ""}
+        {(this.state.error || this.props.googleSearch) ? <div className="ui blue camera message">Please try again! Unable to read the text</div> : ""}
         {this.state.clicked
           ?
           <div className="ui inverted vertical footer segment">
@@ -145,12 +145,13 @@ import withAuth from '../hocs/withAuth';
 }
 
 const mapStateToProps = (state) => {
-  console.log("in web", state);
+  console.log("in web", state.googleSearch);
   return {
     img: state.img,
     imageText: state.imageText,
     user: state.auth.currentUser.username,
-    id: state.auth.currentUser.id
+    id: state.auth.currentUser.id,
+    error: state.googleSearch
   }
 }
 

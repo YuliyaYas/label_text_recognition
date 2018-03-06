@@ -28,9 +28,14 @@ export const fetchImages = (id) => dispatch => {
 export const fetchSearchresult = (term, history, user) => dispatch => {
   dispatch({ type: 'ASYNC_START' });
   adapter.auth.getSearchResult(term).then(results => {
+    if (results === undefined){
+      dispatch({ type: 'SEARCH_ERROR', errors: true })
+    }
     // console.log("in fetchSearchResults", results)
+    else {
     dispatch({type: 'SET_SEARCH_RESULTS', results})
     history.push(`/${user}/search`)
+  }
   });
 };
 

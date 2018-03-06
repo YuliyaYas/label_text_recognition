@@ -32,7 +32,7 @@ class Images extends React.Component{
           <div className="column">
           </div>
           <div className="column">
-          <a href={`${this.props.name}`} className="circular ui large icon blue basic button">
+          <a href={`/${this.props.name}`} className="circular ui large icon blue basic button">
             <i className="camera retro icon"></i>
           </a>
           </div>

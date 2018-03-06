@@ -37,7 +37,7 @@ render(){
             </a>
             </div>
             <div className="column">
-            <a href={`${this.props.name}`} className="circular ui large icon blue basic button">
+            <a href={`/${this.props.name}`} className="circular ui large icon blue basic button">
               <i className="camera retro icon"></i>
             </a>
             </div>
@@ -56,9 +56,7 @@ render(){
         <div className="ui center aligned container">
         <div className="ui three column grid">
             <div className="column">
-            <a href={`${this.props.name}`} className="circular ui large icon blue basic button" onClick={this.capture}>
-              <i className="camera retro icon"></i>
-            </a>
+
             </div>
             <div className="column">
             <a href={`/${this.props.name}/images`} className="circular ui large icon blue basic button" onClick={this.capture}>
@@ -69,7 +67,9 @@ render(){
             {this.props.imageText ?
                 <button type="submit" className="ui basic green button" onClick={this.handleSave}>Save</button>
                 :
-                ""
+                <a href={`/${this.props.name}`} className="circular ui large icon blue basic button" onClick={this.capture}>
+                  <i className="camera retro icon"></i>
+                </a>
               }
             </div>
             </div>

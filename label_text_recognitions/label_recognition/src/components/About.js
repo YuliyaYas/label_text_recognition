@@ -18,7 +18,7 @@ const About = (props) => {
         <h3 className="ui left floated header">More info</h3>
         <div className="ui clearing divider"></div>
         <p>Integer consequat lorem purus, a pellentesque eros suscipit vel. Sed finibus ex at ornare tristique. Vestibulum at magna eu massa pellentesque tristique ac tristique erat. Integer ac arcu magna. Nunc auctor, turpis sed tempus egestas, risus metus posuere mauris, eu vehicula arcu felis porta massa.
-        Duis pharetra mauris id varius mattis.
+        Duis.
         </p>
       </div>
       {props.loggedIn ?
